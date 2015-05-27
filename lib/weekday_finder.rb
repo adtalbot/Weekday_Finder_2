@@ -2,30 +2,10 @@ class String
   define_method(:weekday_finder) do
     date = Time.new(2015, 05, 27)
     month_num = date.month
-    month_word = ""
-    if month_num.==(1)
-      month_word = "January"
-    elsif
-      month_num.==(2)
-      month_word = "February"
-    elsif
-      month_num.==(3)
-      month_word = "March"
-    elsif
-      month_num.==(4)
-      month_word = "April"
-    elsif
-      month_num.==(5)
-      month_word = "May"
-    elsif
-      month_num.==(6)
-      month_word = "June"
-    elsif
-      month_num.==(7)
-      month_word = "July"
-    elsif
-      month_num.==(8)
-      month_word = "August"
-    end
+
+    months = { 1 => 'January', 2 => 'February', 3 => 'March', 4 => 'April', 5 => 'May', 6 => 'June', 7 => 'July', 8 => 'August', 9 => 'September',
+              10 => 'October', 11 => 'November', 12 => 'Decemeber'}
+
+    month_word = months.fetch(month_num)
   end
 end
