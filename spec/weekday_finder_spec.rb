@@ -1,5 +1,6 @@
 require('rspec')
 require('weekday_finder')
+require('pry')
 
 describe('weekday_finder') do
   it('determines the month in words from the date') do
